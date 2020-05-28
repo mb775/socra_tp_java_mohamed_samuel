@@ -29,4 +29,34 @@ public class AppTest {
 
     }
 
+    @Test
+    public void givenNumbers_whenRunningIsNeed_ThenCheckBool() {
+        String str = "25";
+        String need = "0123456789";
+
+
+        boolean b = App.isOtherIn(str,need);
+        assertEquals(true,b);
+    }
+
+    @Test
+    public void givenNumbersAndChars_whenRunningIsNeed_ThenCheckBool() {
+        String str = "2a5";
+        String need = "0123456789";
+
+
+        boolean b = App.isOtherIn(str,need);
+        assertEquals(false,b);
+    }
+
+
+    @Test
+    public void givenChars_whenRunningIsNeed_ThenCheckBool() {
+        String str = "dae";
+        String need = "0123456789";
+
+
+        boolean b = App.isOtherIn(str,need);
+        assertEquals(false,b);
+    }
 }
