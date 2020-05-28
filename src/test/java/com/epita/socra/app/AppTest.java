@@ -29,4 +29,17 @@ public class AppTest {
         verify(mock).write(argThat(message -> message.contains("TEST")));
 
     }
+
+    @Test
+    public void givenInt32_WhenRunningAFunction_ThenReturnARomanString()
+    {
+        int number = 32;
+        String expected = "XXXII";
+
+        String roman_string = ConvertToRoman.convert(number);
+
+
+        assertEquals(expected, roman_string);
+
+    }
 }
