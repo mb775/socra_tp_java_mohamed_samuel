@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Roman_test {
+public class RomanToInt_Test {
     @Test
     public void givenRoman32_WhenRunningAFunction_ThenReturnAInt()
     {
