@@ -2,21 +2,77 @@ package com.epita.socra.app;
 
 
 import org.junit.Test;
-import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
 
 public class Roman_test {
     @Test
-    public void givenInt32_WhenRunningAFunction_ThenReturnARomanString()
+    public void givenRoman32_WhenRunningAFunction_ThenReturnAInt()
     {
-        int number = 32;
-        String expected = "XXXII";
+        int exepted = 32;
+        String RomanNumber = "XXXII";
 
-        String roman_string = ConvertToRoman.convert(number);
+        int result = ConvertRomanToInt.convert(RomanNumber);
 
-
-        assertEquals(expected, roman_string);
-
+        assertEquals(exepted,result);
     }
+
+
+    @Test
+    public void givenRoman3000_WhenRunningAFunction_ThenReturnAInt()
+    {
+        int exepted = 3000;
+        String RomanNumber = "MMM";
+
+        int result = ConvertRomanToInt.convert(RomanNumber);
+
+        assertEquals(exepted,result);
+    }
+
+    @Test
+    public void givenRoman5_WhenRunningAFunction_ThenReturnAInt()
+    {
+        int exepted = 5;
+        String RomanNumber = "V";
+
+        int result = ConvertRomanToInt.convert(RomanNumber);
+
+        assertEquals(exepted,result);
+    }
+
+    @Test
+    public void givenRoman14_WhenRunningAFunction_ThenReturnAInt()
+    {
+        int exepted = 14;
+        String RomanNumber = "XIV";
+
+        int result = ConvertRomanToInt.convert(RomanNumber);
+
+        assertEquals(exepted,result);
+    }
+
+    @Test
+    public void givenRoman70_WhenRunningAFunction_ThenReturnAInt()
+    {
+        int exepted = 70;
+        String RomanNumber = "LXX";
+
+        int result = ConvertRomanToInt.convert(RomanNumber);
+
+        assertEquals(exepted,result);
+    }
+
+
+    @Test
+    public void givenRoman196_WhenRunningAFunction_ThenReturnAInt()
+    {
+        int exepted = 196;
+        String RomanNumber = "CXCVI";
+
+        int result = ConvertRomanToInt.convert(RomanNumber);
+
+        assertEquals(exepted,result);
+    }
+
+
 }

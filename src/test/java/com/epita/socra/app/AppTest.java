@@ -3,7 +3,6 @@ package com.epita.socra.app;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -30,16 +29,4 @@ public class AppTest {
 
     }
 
-    @Test
-    public void givenInt32_WhenRunningAFunction_ThenReturnARomanString()
-    {
-        int number = 32;
-        String expected = "XXXII";
-
-        String roman_string = ConvertToRoman.convert(number);
-
-
-        assertEquals(expected, roman_string);
-
-    }
 }
